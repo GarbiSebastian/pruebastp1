@@ -1,26 +1,26 @@
 <?php
-//CASO 1
+//CASO 3
 $paginas = 8;
 
 $links=[];
 
-//Nodo muy destacado pagina 1   // * -> 1
-for ($i = 2; $i <= $paginas; $i++) {
+for ($i = 3; $i <= $paginas; $i++) {
+    $pag1 = $i;
+    for ($j = 3; $j <= $paginas; $j++) {
+        $pag2 = $j;
+	if($pag1!= $pag2){
+            $links[] = [$pag1, $pag2];
+        }
+    }
+}
+
+for ($i = 3; $i <= $paginas; $i++) {
     $pag1 = $i;
     $pag2 = 1;
     $links[] = [$pag1, $pag2];
-}
-
-for ($i = 3; $i <= $paginas-1; $i++) {// 3 -> 4->5->6->7->8
-    $pag1 = $i;
-    $pag2 = $pag1+1;
-    $links[] = [$pag1, $pag2];
 } 
 
-// 8 -> 3
-$pag1 = $paginas;
-$pag2 = 3;
-$links[] = [$pag1, $pag2];
+$links[] = [1, 2];
 
 sort($links);
 

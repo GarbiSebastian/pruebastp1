@@ -11,7 +11,7 @@ for ($i = 2; $i <= $paginas; $i++) {
     $links[] = [$pag1, $pag2];
 }
 
-for ($i = 3; $i <= $paginas-1; $i++) {// 3 -> 4->5->6->7->8
+for ($i = 3; $i <= $paginas-1; $i++) {// 3 -> 4 -> 5 -> 6 -> 7 -> 8
     $pag1 = $i;
     $pag2 = $pag1+1;
     $links[] = [$pag1, $pag2];

@@ -1,26 +1,26 @@
 <?php
-//CASO 1
+//k4 vs c4
 $paginas = 8;
 
 $links=[];
 
-//Nodo muy destacado pagina 1   // * -> 1
-for ($i = 2; $i <= $paginas; $i++) {
+for ($i =5; $i <= $paginas; $i++) {
     $pag1 = $i;
-    $pag2 = 1;
+    for ($j = 5; $j <= $paginas; $j++) {
+        $pag2 = $j;
+	if($pag1!= $pag2){
+            $links[] = [$pag1, $pag2];
+        }
+    }
+}
+
+for ($i = 1; $i < 4; $i++) {
+    $pag1 = $i;
+    $pag2 = $i+1;
     $links[] = [$pag1, $pag2];
 }
 
-for ($i = 3; $i <= $paginas-1; $i++) {// 3 -> 4->5->6->7->8
-    $pag1 = $i;
-    $pag2 = $pag1+1;
-    $links[] = [$pag1, $pag2];
-} 
-
-// 8 -> 3
-$pag1 = $paginas;
-$pag2 = 3;
-$links[] = [$pag1, $pag2];
+$links[] = [4, 1];
 
 sort($links);
 
