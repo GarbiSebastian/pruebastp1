@@ -1,13 +1,8 @@
 <?php
 
-$paginas = 8;
+$paginas = 10000;
 
-$links=[];
-
-$links[] = "1 2";
-for ($i = 1; $i < $paginas; $i++) {
-    $links[] = ($i+1)." 1";
-}
+$links = [];
 
 $cantLinks = count($links);
 
@@ -16,7 +11,3 @@ echo $cantLinks.PHP_EOL;
 foreach ($links as $link) {
     echo $link.PHP_EOL;
 }
-
-
-
-
