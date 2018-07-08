@@ -7,7 +7,9 @@ $resultados = [];
 foreach ($ps as $p) {
     $comando = "./../Metnum_2018_1C_TP1/tp1 $test $p";
 //    echo $comando.PHP_EOL;
-    exec($comando);
+    $output= [];
+    $return_var=null;
+    exec($comando, $output, $return_var);
     $contenido = file_get_contents($salida);
     $datos = array_map(function($v){return doubleval($v);},explode(PHP_EOL, $contenido));
     
